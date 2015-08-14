@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dip">
+    
+    <RelativeLayout
+        android:id="@+id/aggregate_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip" >
+        <TextView
+            android:id="@+id/aggregate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="集合地点:" />
+        
+        <TextView
+            android:id="@+id/aggregate_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/aggregate"
+            android:singleLine="true"
+            android:layout_toRightOf="@id/aggregate"
+            android:textSize="18dp"
+            android:text="null" />
+        
+    </RelativeLayout>
+    
+    <!-- class="com.baidu.mapapi.map.SupportMapFragment" -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:layout_below="@id/aggregate_layout" >
+        <fragment
+            android:id="@+id/fragment_active_address"
+            android:layout_width="match_parent"
+            android:layout_height="200dip"
+            class="com.baidu.mapapi.map.SupportMapFragment" />
+        <TextView 
+            android:id="@+id/active_mind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:gravity="center"
+            android:text="自驾路线(集合地点)"
+            android:textColor="#fff"
+            android:background="@drawable/text_background"/>
+    </FrameLayout>
+</RelativeLayout>

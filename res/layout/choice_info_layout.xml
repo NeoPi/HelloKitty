@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/bbs_post_add_photo_title_bg"
+    android:id="@+id/choice"
+    android:orientation="vertical" >
+    
+
+    <RelativeLayout
+        android:id="@+id/choice_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/choice_info_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/choice_info_detail"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="20sp"
+            android:text="TextView" />
+
+        <LinearLayout
+            android:id="@+id/choice_info_street" 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/choice_info_title"
+           
+            android:orientation="horizontal">
+            
+        	<TextView 
+           	 	android:id="@+id/choice_info_distance"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:padding="5dp"
+            	android:hint="距离"/>
+        	<ImageView
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="20dp"
+        	    android:layout_gravity="center_vertical"
+        	    android:background="@drawable/split_line_vertical"/>
+        	<TextView 
+        	    android:id="@+id/choice_info_address"
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:singleLine="true" 
+				android:ellipsize="end"
+				android:padding="5dp"
+        	    android:text="地址"/>
+        </LinearLayout>
+        
+        <TextView 
+            android:id="@+id/choice_info_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@id/choice_info_street"
+            android:gravity="center"
+            android:clickable="true"
+            android:text="详情"
+            />
+    </RelativeLayout>
+
+    <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:background="@drawable/app_setting_bottom_line_login"/>
+    <LinearLayout
+        android:id="@+id/choice_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        
+        <Button 
+            android:id="@+id/search_nearby"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/bbs_post_add_photo_title_bg"
+            android:textSize="15sp"
+            android:text="地点详情"/>
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/split_line_vertical"/>
+        <Button 
+            android:id="@+id/go_there_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" 
+            android:background="@drawable/bbs_post_add_photo_title_bg"
+            android:textSize="15sp"
+            android:text="到这儿去"/>
+    </LinearLayout>
+    <include 
+        android:id="@+id/poi_choice_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/detail_pop_layout"
+        android:visibility="gone"/>
+    
+</LinearLayout>

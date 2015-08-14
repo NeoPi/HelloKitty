@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <RelativeLayout
+        android:id="@+id/search_destination_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dip"
+            android:layout_marginLeft="5dip"
+            android:layout_centerVertical="true"
+            android:background="@android:color/white"
+            android:textColor="@color/bt_bg_blue_default"
+            android:textSize="20dip"
+            android:text="搜索" />
+
+        <RelativeLayout
+            android:id="@+id/relativelayout_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dip"
+            android:layout_toLeftOf="@id/search_btn"
+            android:background="@drawable/text_background" >
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/ic_menu_search" />
+
+            <ImageView
+                android:id="@+id/clear_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/ic_menu_delete" />
+
+            <EditText
+                android:id="@+id/search_key"
+                android:layout_width="wrap_content"
+                android:layout_height="48dip"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:layout_toLeftOf="@id/clear_icon"
+                android:layout_toRightOf="@id/search_icon"
+                android:background="@null"
+                android:hint="搜索地点" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_destination_rl" >
+
+        <ListView
+            android:id="@+id/suggest_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@drawable/bbs_post_add_photo_title_bg" >
+        </ListView>
+        
+        <ImageView 
+            android:id="@+id/nothing_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/bbs_post_add_photo_title_bg"
+            android:src="@drawable/biyiguang"/>
+    </FrameLayout>
+    
+</RelativeLayout>

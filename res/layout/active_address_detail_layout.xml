@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <include 
+        android:id="@+id/active_address_detail_title"
+        layout="@layout/public_top_banner"/>
+    
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/address_select"
+        android:layout_below="@id/active_address_detail_title"
+        android:clickable="true" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout_edit"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:layout_below="@id/active_address_detail_title"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:layout_margin="10dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dip"
+            android:gravity="center_vertical"
+            android:hint="确认地址"
+            android:textSize="16dip" />
+
+        <TextView
+            android:id="@+id/address_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:drawableRight="@android:drawable/ic_menu_edit"
+            android:gravity="center_vertical"
+            android:padding="3dip"
+            android:singleLine="true"
+            android:text="待确认地址"
+            android:textSize="20dip" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/address_select"
+        android:layout_width="match_parent"
+        android:layout_height="260dip"
+        android:layout_alignParentBottom="true" >
+
+        <ListView
+            android:id="@+id/address_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bbs_post_add_photo_title_bg"
+            android:padding="5dip" >
+        </ListView>
+
+        <ProgressBar
+            android:id="@+id/active_address_progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/alpha_center_corner_night"
+            android:focusable="true"
+             />
+
+        <LinearLayout
+            android:id="@+id/address_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/delete_destination"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:text="删除本目的地" />
+
+            <ImageView
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/app_vertical_splitline" />
+
+            <Button
+                android:id="@+id/search_destination"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:text="搜索地点" />
+        </LinearLayout>
+
+    </RelativeLayout>
+    
+    <ImageView 
+        android:id="@+id/baidumap_location"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginBottom="5dip"
+        android:layout_above="@id/address_select"
+        android:src="@drawable/location_map"/>
+
+</RelativeLayout>
