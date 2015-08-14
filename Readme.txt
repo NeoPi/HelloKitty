@@ -1,4 +1,4 @@
-Git is a version control system.
-Git is free software.
-Git is a distributed version control system.
-Git is free software.
+
+
+这是一个基于百度地图SDK开发的测试用的，项目中用的的一些功能，我本人都会先写一个小demo，然后将每个功能集中处理一下，然后就有了这个呆萌的项目，
+该项目中可能有好多的bug，我在公司项目中改掉了没有在这些小demo中修改（谁让我懒呢）
